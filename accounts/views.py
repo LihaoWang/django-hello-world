@@ -19,7 +19,7 @@ def registerPage(request):
             messages.success(request, "Account was created for"+user)
             return redirect("login")
 
-    return render(request, "register/register.html", {"form": form})
+    return render(request, "accounts/register.html", {"form": form})
 
 
 def loginPage(request):
@@ -37,7 +37,7 @@ def loginPage(request):
             messages.info(request, 'Username OR password is incorrect')
 
     context = {}
-    return render(request, 'register/login.html', context)
+    return render(request, 'accounts/login.html', context)
 
 
 def logoutUser(request):
@@ -47,4 +47,4 @@ def logoutUser(request):
 
 @login_required(login_url='login')
 def user(request):
-    return render(request, 'register/user.html')
+    return render(request, 'accounts/user.html')
