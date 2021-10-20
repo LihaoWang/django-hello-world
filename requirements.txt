@@ -1,6 +1,5 @@
 gunicorn
 django-heroku
-dj-database-url
 black
 flake8
 coverage
